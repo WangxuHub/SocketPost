@@ -1,0 +1,4 @@
+F:\Mycode\SocketPost\SocketPost\bin\SocketPost.dll
+F:\Mycode\SocketPost\SocketPost\bin\SocketPost.pdb
+F:\Mycode\SocketPost\SocketPost\obj\Debug\SocketPost.dll
+F:\Mycode\SocketPost\SocketPost\obj\Debug\SocketPost.pdb
