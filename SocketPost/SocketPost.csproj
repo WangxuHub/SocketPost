@@ -33,6 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>E:\项目\Education\Education\Education.Web\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -50,6 +53,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Resource\js\Common.js" />
+    <Content Include="Resource\js\index.js" />
+    <Content Include="Resource\js\jquery-2.1.4.js" />
+    <Content Include="SocketPost\GoOnLine.aspx" />
+    <Content Include="SocketPost\SocketPostList.aspx" />
+    <Content Include="SocketPost\ManageList.aspx" />
+    <Content Include="SocketPost\DeviceList.aspx" />
+    <Content Include="SocketPost\AllSocketList.aspx" />
     <Content Include="UserControl\HeadInclude.ascx" />
     <Content Include="Index.aspx" />
     <Content Include="Resource\js\jquery-easyui-1.3.6\changelog.txt" />
@@ -581,14 +593,51 @@
     <Content Include="Resource\js\jquery-easyui-1.3.6\themes\metro\window.css" />
     <Content Include="Resource\js\jquery.min.js" />
     <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\DeviceInfo.cs" />
+    <Compile Include="Common\JsonHelper.cs" />
+    <Compile Include="Common\ManageInfo.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="SocketPost\GoOnLine.aspx.cs">
+      <DependentUpon>GoOnLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SocketPost\GoOnLine.aspx.designer.cs">
+      <DependentUpon>GoOnLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SocketPost\SocketPostList.aspx.cs">
+      <DependentUpon>SocketPostList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SocketPost\SocketPostList.aspx.designer.cs">
+      <DependentUpon>SocketPostList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SocketPost\ManageList.aspx.cs">
+      <DependentUpon>ManageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SocketPost\ManageList.aspx.designer.cs">
+      <DependentUpon>ManageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SocketPost\DeviceList.aspx.cs">
+      <DependentUpon>DeviceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SocketPost\DeviceList.aspx.designer.cs">
+      <DependentUpon>DeviceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SocketPost\AllSocketList.aspx.cs">
+      <DependentUpon>AllSocketList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SocketPost\AllSocketList.aspx.designer.cs">
+      <DependentUpon>AllSocketList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SocketServer\WebSocketHelper.cs" />
+    <Compile Include="SocketServer\WebSocket.cs" />
     <Compile Include="UserControl\HeadInclude.ascx.cs">
       <DependentUpon>HeadInclude.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -606,6 +655,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resource\js\jquery-2.1.4.min.map" />
     <None Include="Resource\js\jquery-easyui-1.3.6\demo\accordion\datagrid_data1.json" />
     <None Include="Resource\js\jquery-easyui-1.3.6\demo\combobox\combobox_data1.json" />
     <None Include="Resource\js\jquery-easyui-1.3.6\demo\combobox\combobox_data2.json" />
@@ -626,6 +676,7 @@
     <None Include="Resource\js\jquery-easyui-1.3.6\demo\tree\tree_data1.json" />
     <None Include="Resource\js\jquery-easyui-1.3.6\demo\tree\tree_data2.json" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
